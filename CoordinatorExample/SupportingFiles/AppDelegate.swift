@@ -12,7 +12,7 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
     private let appNavigationController = UINavigationController()
     private lazy var appRouter = Router(navigationController: self.appNavigationController)
-    private lazy var appCoordinator = AppCoordinator(router: appRouter, navigationType: .newFlow)
+    private lazy var appCoordinator = AppCoordinator(userState: .loggedOut, router: appRouter)
     
     lazy var window: UIWindow? = UIWindow(frame: UIScreen.main.bounds)
      

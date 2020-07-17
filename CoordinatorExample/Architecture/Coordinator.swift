@@ -9,7 +9,7 @@ import UIKit
 class Coordinator: NSObject {
     enum NavigationType {
         case currentFlow
-        case newFlow
+        case newFlow(hideBar: Bool)
     }
     
     let router: Router
@@ -29,8 +29,8 @@ class Coordinator: NSObject {
         switch navigationType {
         case .currentFlow:
             router.push(root)
-        case .newFlow:
-            router.setRoot(root)
+        case .newFlow(let hideBar):
+            router.setRoot(root, hideBar: hideBar)
         }
     }
     

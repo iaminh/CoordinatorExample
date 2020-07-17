@@ -8,21 +8,26 @@
 
 import UIKit
 
+enum UserState {
+    case loggedIn
+    case loggedOut
+}
+
 class AppCoordinator: Coordinator {
-    enum CoordinatorState {
-        case login
-        case registration
-        case home
-    }
-    
-    private lazy var rootVC: UIViewController = {
-        let vc = UIViewController()
-        vc.title = "Home"
-        vc.view.backgroundColor = .red
-        return vc
-    }()
-    
+    private var userState: UserState
+
     override var root: Presentable {
-        return rootVC
+        switch userState {
+        case .loggedOut:
+            return LoginCoordinator(router: router, navigationType: .currentFlow)
+        case .loggedIn:
+            return DashboardCoordinator(router: router, navigationType: .currentFlow)
+        }
+    }
+
+    init(userState: UserState, router: Router) {
+        self.userState = userState
+
+        super.init(router: router, navigationType: .newFlow(hideBar: true))
     }
 }

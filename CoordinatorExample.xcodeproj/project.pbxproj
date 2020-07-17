@@ -15,6 +15,22 @@
 		BA4E07F324A4905800BF7D2B /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4E07F024A4905800BF7D2B /* Coordinator.swift */; };
 		BA4E07F524A49B7000BF7D2B /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4E07F424A49B7000BF7D2B /* AppCoordinator.swift */; };
 		BA4E07F924A5AF4300BF7D2B /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4E07F824A5AF4300BF7D2B /* HomeCoordinator.swift */; };
+		BAA67BA724C18E9100062F88 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA67BA524C18E9100062F88 /* LoginViewController.swift */; };
+		BAA67BA824C18E9100062F88 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAA67BA624C18E9100062F88 /* LoginViewController.xib */; };
+		BAA67BAB24C18EBA00062F88 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA67BA924C18EBA00062F88 /* RegistrationViewController.swift */; };
+		BAA67BAC24C18EBA00062F88 /* RegistrationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAA67BAA24C18EBA00062F88 /* RegistrationViewController.xib */; };
+		BAA67BAF24C18ED900062F88 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA67BAD24C18ED900062F88 /* DashboardViewController.swift */; };
+		BAA67BB024C18ED900062F88 /* DashboardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAA67BAE24C18ED900062F88 /* DashboardViewController.xib */; };
+		BAA67BB424C18F0F00062F88 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA67BB224C18F0F00062F88 /* ProfileViewController.swift */; };
+		BAA67BB524C18F0F00062F88 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAA67BB324C18F0F00062F88 /* ProfileViewController.xib */; };
+		BAA67BB824C18F1D00062F88 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA67BB624C18F1D00062F88 /* EditProfileViewController.swift */; };
+		BAA67BB924C18F1D00062F88 /* EditProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAA67BB724C18F1D00062F88 /* EditProfileViewController.xib */; };
+		BAA67BBD24C18F3700062F88 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA67BBB24C18F3700062F88 /* SettingsViewController.swift */; };
+		BAA67BBE24C18F3700062F88 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAA67BBC24C18F3700062F88 /* SettingsViewController.xib */; };
+		BAA67BC124C1C19900062F88 /* DashboardCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA67BC024C1C19900062F88 /* DashboardCoordinator.swift */; };
+		BAA67BC324C1C1DE00062F88 /* SettingsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA67BC224C1C1DE00062F88 /* SettingsCoordinator.swift */; };
+		BAA67BC524C1C1FD00062F88 /* ProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA67BC424C1C1FD00062F88 /* ProfileCoordinator.swift */; };
+		BAA67BC724C1C3B400062F88 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA67BC624C1C3B400062F88 /* LoginCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +44,22 @@
 		BA4E07F024A4905800BF7D2B /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		BA4E07F424A49B7000BF7D2B /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		BA4E07F824A5AF4300BF7D2B /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		BAA67BA524C18E9100062F88 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		BAA67BA624C18E9100062F88 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		BAA67BA924C18EBA00062F88 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		BAA67BAA24C18EBA00062F88 /* RegistrationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegistrationViewController.xib; sourceTree = "<group>"; };
+		BAA67BAD24C18ED900062F88 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		BAA67BAE24C18ED900062F88 /* DashboardViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DashboardViewController.xib; sourceTree = "<group>"; };
+		BAA67BB224C18F0F00062F88 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		BAA67BB324C18F0F00062F88 /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
+		BAA67BB624C18F1D00062F88 /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
+		BAA67BB724C18F1D00062F88 /* EditProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditProfileViewController.xib; sourceTree = "<group>"; };
+		BAA67BBB24C18F3700062F88 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		BAA67BBC24C18F3700062F88 /* SettingsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
+		BAA67BC024C1C19900062F88 /* DashboardCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardCoordinator.swift; sourceTree = "<group>"; };
+		BAA67BC224C1C1DE00062F88 /* SettingsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCoordinator.swift; sourceTree = "<group>"; };
+		BAA67BC424C1C1FD00062F88 /* ProfileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinator.swift; sourceTree = "<group>"; };
+		BAA67BC624C1C3B400062F88 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,7 +114,11 @@
 			isa = PBXGroup;
 			children = (
 				BA4E07F424A49B7000BF7D2B /* AppCoordinator.swift */,
+				BAA67BBA24C18F2600062F88 /* Settings */,
+				BAA67BB124C18F0000062F88 /* Profile */,
+				BAA67BA324C18E6E00062F88 /* Login */,
 				BA4E07F724A5AF2900BF7D2B /* Home */,
+				BAA67BA224C18E5800062F88 /* Dashboard */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -103,6 +139,82 @@
 				BA4E07E424A4902D00BF7D2B /* LaunchScreen.storyboard */,
 			);
 			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		BAA67BA224C18E5800062F88 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				BAA67BCB24C1C3DD00062F88 /* View */,
+				BAA67BC024C1C19900062F88 /* DashboardCoordinator.swift */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		BAA67BA324C18E6E00062F88 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				BAA67BC624C1C3B400062F88 /* LoginCoordinator.swift */,
+				BAA67BC824C1C3BE00062F88 /* View */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		BAA67BB124C18F0000062F88 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				BAA67BC924C1C3C900062F88 /* View */,
+				BAA67BC424C1C1FD00062F88 /* ProfileCoordinator.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		BAA67BBA24C18F2600062F88 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				BAA67BCA24C1C3D200062F88 /* View */,
+				BAA67BC224C1C1DE00062F88 /* SettingsCoordinator.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		BAA67BC824C1C3BE00062F88 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BAA67BA524C18E9100062F88 /* LoginViewController.swift */,
+				BAA67BA624C18E9100062F88 /* LoginViewController.xib */,
+				BAA67BA924C18EBA00062F88 /* RegistrationViewController.swift */,
+				BAA67BAA24C18EBA00062F88 /* RegistrationViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BAA67BC924C1C3C900062F88 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BAA67BB224C18F0F00062F88 /* ProfileViewController.swift */,
+				BAA67BB324C18F0F00062F88 /* ProfileViewController.xib */,
+				BAA67BB624C18F1D00062F88 /* EditProfileViewController.swift */,
+				BAA67BB724C18F1D00062F88 /* EditProfileViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BAA67BCA24C1C3D200062F88 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BAA67BBB24C18F3700062F88 /* SettingsViewController.swift */,
+				BAA67BBC24C18F3700062F88 /* SettingsViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BAA67BCB24C1C3DD00062F88 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BAA67BAD24C18ED900062F88 /* DashboardViewController.swift */,
+				BAA67BAE24C18ED900062F88 /* DashboardViewController.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,8 +275,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAA67BB524C18F0F00062F88 /* ProfileViewController.xib in Resources */,
 				BA4E07E624A4902D00BF7D2B /* LaunchScreen.storyboard in Resources */,
+				BAA67BAC24C18EBA00062F88 /* RegistrationViewController.xib in Resources */,
+				BAA67BBE24C18F3700062F88 /* SettingsViewController.xib in Resources */,
+				BAA67BB924C18F1D00062F88 /* EditProfileViewController.xib in Resources */,
+				BAA67BB024C18ED900062F88 /* DashboardViewController.xib in Resources */,
 				BA4E07E324A4902D00BF7D2B /* Assets.xcassets in Resources */,
+				BAA67BA824C18E9100062F88 /* LoginViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -175,12 +293,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAA67BC124C1C19900062F88 /* DashboardCoordinator.swift in Sources */,
+				BAA67BB824C18F1D00062F88 /* EditProfileViewController.swift in Sources */,
+				BAA67BA724C18E9100062F88 /* LoginViewController.swift in Sources */,
+				BAA67BAF24C18ED900062F88 /* DashboardViewController.swift in Sources */,
+				BAA67BB424C18F0F00062F88 /* ProfileViewController.swift in Sources */,
 				BA4E07F524A49B7000BF7D2B /* AppCoordinator.swift in Sources */,
+				BAA67BAB24C18EBA00062F88 /* RegistrationViewController.swift in Sources */,
 				BA4E07F224A4905800BF7D2B /* Router.swift in Sources */,
 				BA4E07DA24A4902A00BF7D2B /* AppDelegate.swift in Sources */,
 				BA4E07F324A4905800BF7D2B /* Coordinator.swift in Sources */,
 				BA4E07F924A5AF4300BF7D2B /* HomeCoordinator.swift in Sources */,
+				BAA67BC324C1C1DE00062F88 /* SettingsCoordinator.swift in Sources */,
 				BA4E07F124A4905800BF7D2B /* Presentable.swift in Sources */,
+				BAA67BC524C1C1FD00062F88 /* ProfileCoordinator.swift in Sources */,
+				BAA67BC724C1C3B400062F88 /* LoginCoordinator.swift in Sources */,
+				BAA67BBD24C18F3700062F88 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
