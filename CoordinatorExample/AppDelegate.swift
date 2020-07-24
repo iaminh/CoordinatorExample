@@ -12,7 +12,7 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
     private let appNavigationController = UINavigationController()
     private lazy var appRouter = Router(navigationController: self.appNavigationController)
-    private lazy var appCoordinator = AppCoordinator(userState: .loggedOut, router: appRouter)
+    private lazy var appCoordinator = AppCoordinator(userManager: UserManager(), router: appRouter)
     
     lazy var window: UIWindow? = UIWindow(frame: UIScreen.main.bounds)
      
@@ -20,6 +20,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         window?.rootViewController = appCoordinator.toPresentable()
         window?.makeKeyAndVisible()
+
+        appCoordinator.deeplinkSubject.send("profile")
+
         return true
     }
 }

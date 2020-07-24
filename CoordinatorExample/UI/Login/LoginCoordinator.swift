@@ -7,11 +7,29 @@
 //
 
 import Foundation
+import Combine
 
 class LoginCoordinator: Coordinator {
-    private let rootVC = LoginViewController()
+    private let userManager: UserManager
 
+    private lazy var loginVC: LoginViewController = {
+        let vc = LoginViewController()
+        vc.onLoginTap = { [weak self] in self?.userManager.userState = .loggedIn }
+        vc.onRegisterTap = { [weak self] in self?.showRegistration() }
+
+        return vc
+    }()
+
+    init(router: Router, navigationType: Coordinator.NavigationType, userManager: UserManager) {
+        self.userManager = userManager
+        super.init(router: router, navigationType: navigationType)
+    }
+
+    private func showRegistration() {
+        router.push(RegistrationViewController())
+    }
+    
     override var root: Presentable {
-        return rootVC
+        return loginVC
     }
 }

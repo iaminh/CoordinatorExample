@@ -9,6 +9,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="CoordinatorExample" customModuleProvider="target">
             <connections>
+                <outlet property="loginButton" destination="Trg-9q-MDb" id="x4C-et-UwE"/>
+                <outlet property="registerButton" destination="N1Q-gD-apa" id="pZq-lI-7KC"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -23,10 +25,16 @@
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Trg-9q-MDb">
                             <rect key="frame" x="0.0" y="0.0" width="57" height="30"/>
                             <state key="normal" title="Login"/>
+                            <connections>
+                                <action selector="loginButtonTapped:" destination="-1" eventType="touchUpInside" id="gzx-Rw-qWs"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N1Q-gD-apa">
                             <rect key="frame" x="0.0" y="50" width="57" height="30"/>
                             <state key="normal" title="Register"/>
+                            <connections>
+                                <action selector="registerButtonTapped:" destination="-1" eventType="touchUpInside" id="IO8-2K-xzi"/>
+                            </connections>
                         </button>
                     </subviews>
                 </stackView>

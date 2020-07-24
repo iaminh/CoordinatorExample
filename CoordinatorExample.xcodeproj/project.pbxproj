@@ -15,6 +15,13 @@
 		BA4E07F324A4905800BF7D2B /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4E07F024A4905800BF7D2B /* Coordinator.swift */; };
 		BA4E07F524A49B7000BF7D2B /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4E07F424A49B7000BF7D2B /* AppCoordinator.swift */; };
 		BA4E07F924A5AF4300BF7D2B /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4E07F824A5AF4300BF7D2B /* HomeCoordinator.swift */; };
+		BA9A3C7824CAD99E008C97C1 /* Deeplink.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9A3C7724CAD99E008C97C1 /* Deeplink.swift */; };
+		BA9A3C7B24CAF251008C97C1 /* CardCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9A3C7A24CAF251008C97C1 /* CardCoordinator.swift */; };
+		BA9A3C7E24CAF27D008C97C1 /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9A3C7C24CAF27D008C97C1 /* CardViewController.swift */; };
+		BA9A3C7F24CAF27D008C97C1 /* CardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA9A3C7D24CAF27D008C97C1 /* CardViewController.xib */; };
+		BA9A3C8224CAF28A008C97C1 /* CardDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9A3C8024CAF28A008C97C1 /* CardDetailViewController.swift */; };
+		BA9A3C8324CAF28A008C97C1 /* CardDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA9A3C8124CAF28A008C97C1 /* CardDetailViewController.xib */; };
+		BA9A3C8524CB082E008C97C1 /* Combine+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9A3C8424CB082E008C97C1 /* Combine+Extensions.swift */; };
 		BAA67BA724C18E9100062F88 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA67BA524C18E9100062F88 /* LoginViewController.swift */; };
 		BAA67BA824C18E9100062F88 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAA67BA624C18E9100062F88 /* LoginViewController.xib */; };
 		BAA67BAB24C18EBA00062F88 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA67BA924C18EBA00062F88 /* RegistrationViewController.swift */; };
@@ -31,6 +38,7 @@
 		BAA67BC324C1C1DE00062F88 /* SettingsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA67BC224C1C1DE00062F88 /* SettingsCoordinator.swift */; };
 		BAA67BC524C1C1FD00062F88 /* ProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA67BC424C1C1FD00062F88 /* ProfileCoordinator.swift */; };
 		BAA67BC724C1C3B400062F88 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA67BC624C1C3B400062F88 /* LoginCoordinator.swift */; };
+		BAA67BCD24C1F1FA00062F88 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA67BCC24C1F1FA00062F88 /* UserManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +52,13 @@
 		BA4E07F024A4905800BF7D2B /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		BA4E07F424A49B7000BF7D2B /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		BA4E07F824A5AF4300BF7D2B /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		BA9A3C7724CAD99E008C97C1 /* Deeplink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deeplink.swift; sourceTree = "<group>"; };
+		BA9A3C7A24CAF251008C97C1 /* CardCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCoordinator.swift; sourceTree = "<group>"; };
+		BA9A3C7C24CAF27D008C97C1 /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
+		BA9A3C7D24CAF27D008C97C1 /* CardViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardViewController.xib; sourceTree = "<group>"; };
+		BA9A3C8024CAF28A008C97C1 /* CardDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailViewController.swift; sourceTree = "<group>"; };
+		BA9A3C8124CAF28A008C97C1 /* CardDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardDetailViewController.xib; sourceTree = "<group>"; };
+		BA9A3C8424CB082E008C97C1 /* Combine+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Combine+Extensions.swift"; sourceTree = "<group>"; };
 		BAA67BA524C18E9100062F88 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		BAA67BA624C18E9100062F88 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		BAA67BA924C18EBA00062F88 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
@@ -60,6 +75,7 @@
 		BAA67BC224C1C1DE00062F88 /* SettingsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCoordinator.swift; sourceTree = "<group>"; };
 		BAA67BC424C1C1FD00062F88 /* ProfileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinator.swift; sourceTree = "<group>"; };
 		BAA67BC624C1C3B400062F88 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
+		BAA67BCC24C1F1FA00062F88 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				BA4E07E724A4902D00BF7D2B /* Info.plist */,
+				BA4E07D924A4902A00BF7D2B /* AppDelegate.swift */,
 				BA4E07FA24A5AF7300BF7D2B /* SupportingFiles */,
 				BA4E07ED24A4904700BF7D2B /* Architecture */,
 				BA4E07F624A5AF2400BF7D2B /* UI */,
@@ -106,6 +123,7 @@
 				BA4E07F024A4905800BF7D2B /* Coordinator.swift */,
 				BA4E07EF24A4905800BF7D2B /* Router.swift */,
 				BA4E07EE24A4905800BF7D2B /* Presentable.swift */,
+				BA9A3C8424CB082E008C97C1 /* Combine+Extensions.swift */,
 			);
 			path = Architecture;
 			sourceTree = "<group>";
@@ -114,11 +132,14 @@
 			isa = PBXGroup;
 			children = (
 				BA4E07F424A49B7000BF7D2B /* AppCoordinator.swift */,
-				BAA67BBA24C18F2600062F88 /* Settings */,
-				BAA67BB124C18F0000062F88 /* Profile */,
+				BA9A3C7724CAD99E008C97C1 /* Deeplink.swift */,
 				BAA67BA324C18E6E00062F88 /* Login */,
 				BA4E07F724A5AF2900BF7D2B /* Home */,
+				BA9A3C7924CAF239008C97C1 /* Card */,
+				BAA67BBA24C18F2600062F88 /* Settings */,
+				BAA67BB124C18F0000062F88 /* Profile */,
 				BAA67BA224C18E5800062F88 /* Dashboard */,
+				BAA67BCC24C1F1FA00062F88 /* UserManager.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -134,11 +155,30 @@
 		BA4E07FA24A5AF7300BF7D2B /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
-				BA4E07D924A4902A00BF7D2B /* AppDelegate.swift */,
 				BA4E07E224A4902D00BF7D2B /* Assets.xcassets */,
 				BA4E07E424A4902D00BF7D2B /* LaunchScreen.storyboard */,
 			);
 			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		BA9A3C7924CAF239008C97C1 /* Card */ = {
+			isa = PBXGroup;
+			children = (
+				BA9A3C7A24CAF251008C97C1 /* CardCoordinator.swift */,
+				BA9A3C8624CB2684008C97C1 /* View */,
+			);
+			path = Card;
+			sourceTree = "<group>";
+		};
+		BA9A3C8624CB2684008C97C1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BA9A3C7C24CAF27D008C97C1 /* CardViewController.swift */,
+				BA9A3C7D24CAF27D008C97C1 /* CardViewController.xib */,
+				BA9A3C8024CAF28A008C97C1 /* CardDetailViewController.swift */,
+				BA9A3C8124CAF28A008C97C1 /* CardDetailViewController.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		BAA67BA224C18E5800062F88 /* Dashboard */ = {
@@ -280,9 +320,11 @@
 				BAA67BAC24C18EBA00062F88 /* RegistrationViewController.xib in Resources */,
 				BAA67BBE24C18F3700062F88 /* SettingsViewController.xib in Resources */,
 				BAA67BB924C18F1D00062F88 /* EditProfileViewController.xib in Resources */,
+				BA9A3C8324CAF28A008C97C1 /* CardDetailViewController.xib in Resources */,
 				BAA67BB024C18ED900062F88 /* DashboardViewController.xib in Resources */,
 				BA4E07E324A4902D00BF7D2B /* Assets.xcassets in Resources */,
 				BAA67BA824C18E9100062F88 /* LoginViewController.xib in Resources */,
+				BA9A3C7F24CAF27D008C97C1 /* CardViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,18 +339,24 @@
 				BAA67BB824C18F1D00062F88 /* EditProfileViewController.swift in Sources */,
 				BAA67BA724C18E9100062F88 /* LoginViewController.swift in Sources */,
 				BAA67BAF24C18ED900062F88 /* DashboardViewController.swift in Sources */,
+				BA9A3C7B24CAF251008C97C1 /* CardCoordinator.swift in Sources */,
 				BAA67BB424C18F0F00062F88 /* ProfileViewController.swift in Sources */,
 				BA4E07F524A49B7000BF7D2B /* AppCoordinator.swift in Sources */,
 				BAA67BAB24C18EBA00062F88 /* RegistrationViewController.swift in Sources */,
+				BA9A3C7E24CAF27D008C97C1 /* CardViewController.swift in Sources */,
 				BA4E07F224A4905800BF7D2B /* Router.swift in Sources */,
 				BA4E07DA24A4902A00BF7D2B /* AppDelegate.swift in Sources */,
 				BA4E07F324A4905800BF7D2B /* Coordinator.swift in Sources */,
 				BA4E07F924A5AF4300BF7D2B /* HomeCoordinator.swift in Sources */,
+				BA9A3C8224CAF28A008C97C1 /* CardDetailViewController.swift in Sources */,
 				BAA67BC324C1C1DE00062F88 /* SettingsCoordinator.swift in Sources */,
 				BA4E07F124A4905800BF7D2B /* Presentable.swift in Sources */,
 				BAA67BC524C1C1FD00062F88 /* ProfileCoordinator.swift in Sources */,
+				BA9A3C8524CB082E008C97C1 /* Combine+Extensions.swift in Sources */,
 				BAA67BC724C1C3B400062F88 /* LoginCoordinator.swift in Sources */,
 				BAA67BBD24C18F3700062F88 /* SettingsViewController.swift in Sources */,
+				BAA67BCD24C1F1FA00062F88 /* UserManager.swift in Sources */,
+				BA9A3C7824CAD99E008C97C1 /* Deeplink.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

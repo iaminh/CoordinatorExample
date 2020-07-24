@@ -9,6 +9,11 @@
 import UIKit
 
 class DashboardViewController: UIViewController {
+    var onShowCardTapped: (() -> Void)? = nil
+
+    @IBAction func showCardTapped(_ sender: Any) {
+        onShowCardTapped?()
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -7,8 +7,14 @@
 //
 
 import UIKit
+import Combine
 
 class LoginViewController: UIViewController {
+    @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var registerButton: UIButton!
+
+    var onLoginTap: (() -> Void)?
+    var onRegisterTap: (() -> Void)?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,5 +22,11 @@ class LoginViewController: UIViewController {
         title = "Login"
     }
 
+    @IBAction func loginButtonTapped(_ sender: Any) {
+        onLoginTap?()
+    }
 
+    @IBAction func registerButtonTapped(_ sender: Any) {
+        onRegisterTap?()
+    }
 }

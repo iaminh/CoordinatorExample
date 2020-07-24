@@ -5,17 +5,24 @@
 //
 
 import UIKit
+import Combine
 
 class Coordinator: NSObject {
     enum NavigationType {
-        case currentFlow
-        case newFlow(hideBar: Bool)
+        case currentFlow // push
+        case newFlow(hideBar: Bool) // present, set root
     }
     
     let router: Router
+
     private var childCoordinators: [Coordinator] = []
     private let navigationType: NavigationType
-    
+
+    var disposeBag = Set<AnyCancellable>()
+
+    let deeplinkSubject = CurrentValueSubject<String?, Never>(nil)
+    var deeplinkDisposeBag = Set<AnyCancellable>()
+
     var root: Presentable {
         fatalError("Override")
     }
@@ -26,21 +33,37 @@ class Coordinator: NSObject {
         
         super.init()
 
-        switch navigationType {
-        case .currentFlow:
-            router.push(root)
-        case .newFlow(let hideBar):
+        if case .newFlow(let hideBar) = navigationType {
             router.setRoot(root, hideBar: hideBar)
         }
     }
-    
-    private func addChild(_ coordinator: Coordinator) {
+
+    func resetDeeplink() {
+        for child in childCoordinators {
+            child.deeplinkDisposeBag = Set<AnyCancellable>()
+        }
+        deeplinkSubject.send(nil)
+    }
+
+    func addChild(_ coordinator: Coordinator) {
+        deeplinkSubject
+            .subscribe(coordinator.deeplinkSubject)
+            .store(in: &coordinator.deeplinkDisposeBag)
+
         childCoordinators.append(coordinator)
     }
 
     private func removeChild(_ coordinator: Coordinator) {
         if let index = childCoordinators.firstIndex(of: coordinator) {
             childCoordinators.remove(at: index)
+        }
+    }
+
+    func setRootChild(coordinator: Coordinator, hideBar: Bool) {
+        addChild(coordinator)
+        router.setRoot(coordinator, hideBar: hideBar) { [weak self, weak coordinator] in
+            guard let coord = coordinator else { return }
+            self?.removeChild(coord)
         }
     }
 

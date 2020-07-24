@@ -1,22 +1,15 @@
 //
-//  DashboardCoordinator.swift
+//  CardCoordinator.swift
 //  CoordinatorExample
 //
-//  Created by Chu Anh Minh on 7/17/20.
+//  Created by Chu Anh Minh on 7/24/20.
 //  Copyright © 2020 MinhChu. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
-class DashboardCoordinator: Coordinator {
-    private lazy var rootVC: DashboardViewController = {
-        let vc = DashboardViewController()
-        vc.onShowCardTapped = { [weak self] in
-            self?.showCard()
-        }
-
-        return vc
-    }()
+class CardCoordinator: Coordinator {
+    private lazy var rootVC = CardViewController()
 
     override var root: Presentable {
         return rootVC
@@ -30,21 +23,20 @@ class DashboardCoordinator: Coordinator {
     private func bindDeeplink() {
         deeplinkSubject
             .unwrap()
-            .map(DashboardFlow.init(deeplink:))
+            .map(CardFlow.init(deeplink:))
             .unwrap()
             .receive(on: DispatchQueue.main)
             .sink { [weak self] deeplink in
                 guard let self = self else { return }
                 switch deeplink {
-                case .card:
-                    self.showCard(animated: false)
+                case .cardDetail:
+                    self.showCardDetail()
                 }
                 self.resetDeeplink()
             }.store(in: &disposeBag)
     }
 
-    private func showCard(animated: Bool = true) {
-        let cardCoordinator = CardCoordinator(router: router, navigationType: .currentFlow)
-        pushChild(coordinator: cardCoordinator, animated: animated)
+    private func showCardDetail() {
+        router.push(CardDetailViewController())
     }
 }
