@@ -10,20 +10,14 @@ import Foundation
 import Combine
 
 class LoginCoordinator: Coordinator {
-    private let userManager: UserManager
-
     private lazy var loginVC: LoginViewController = {
-        let vc = LoginViewController()
-        vc.onLoginTap = { [weak self] in self?.userManager.userState = .loggedIn }
-        vc.onRegisterTap = { [weak self] in self?.showRegistration() }
+        let vm = LoginViewModel()
+        let vc = LoginViewController(viewModel: vm)
+        
+        vm.bindStepper(to: coordinatorStepper) // important -- use for binding
 
         return vc
     }()
-
-    init(router: Router, navigationType: Coordinator.NavigationType, userManager: UserManager) {
-        self.userManager = userManager
-        super.init(router: router, navigationType: navigationType)
-    }
 
     private func showRegistration() {
         router.push(RegistrationViewController())
@@ -31,5 +25,23 @@ class LoginCoordinator: Coordinator {
     
     override var root: Presentable {
         return loginVC
+    }
+    
+    override func bindStepper() {
+        super.bindStepper()
+        
+        coordinatorStepper.receive(on: DispatchQueue.main)
+            .sink { [weak self] step in
+                switch step {
+                case .homeRequired: // cai nay thang parent (AppCoordinator) no da observe roi
+                    break
+                case .registerRequired:
+                    self?.showRegistration()
+                default:
+                    break
+                }
+                
+            }.store(in: &disposeBag)
+        
     }
 }

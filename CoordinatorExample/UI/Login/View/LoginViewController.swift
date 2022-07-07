@@ -9,12 +9,12 @@
 import UIKit
 import Combine
 
-class LoginViewController: UIViewController {
+class LoginViewController: Controller<LoginViewModel> {
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var registerButton: UIButton!
 
-    var onLoginTap: (() -> Void)?
-    var onRegisterTap: (() -> Void)?
+    let stepper = PassthroughSubject<Step, Never>()
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,10 +23,10 @@ class LoginViewController: UIViewController {
     }
 
     @IBAction func loginButtonTapped(_ sender: Any) {
-        onLoginTap?()
+        vm.in.loginTap.send()
     }
 
     @IBAction func registerButtonTapped(_ sender: Any) {
-        onRegisterTap?()
+        vm.in.registerTap.send()
     }
 }

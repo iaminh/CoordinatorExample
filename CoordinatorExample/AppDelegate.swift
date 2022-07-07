@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = appCoordinator.toPresentable()
         window?.makeKeyAndVisible()
 
-        appCoordinator.deeplinkSubject.send("profile")
+//        appCoordinator.deeplinkSubject.send("profile")
 
         return true
     }

@@ -37,6 +37,10 @@ class Router: NSObject, Presentable, UINavigationControllerDelegate {
             navigationController.dismiss(animated: animated, completion: completion)
         }
     }
+    
+    func dismiss(animated: Bool = true, completion: (() -> Void)? = nil) {
+        navigationController.dismiss(animated: animated, completion: completion)
+    }
 
     func dismiss(coordinator: Coordinator, animated: Bool = true, completion: (() -> Void)? = nil) {
         dismiss(coordinator.toPresentable())

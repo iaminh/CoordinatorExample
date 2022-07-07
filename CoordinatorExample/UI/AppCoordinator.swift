@@ -15,35 +15,15 @@ enum UserState {
 }
 
 class AppCoordinator: Coordinator {
-    private let userManager: UserManager
-
     override var root: Presentable {
         return router.toPresentable()
     }
 
     init(userManager: UserManager, router: Router) {
-        self.userManager = userManager
         super.init(router: router, navigationType: .newFlow(hideBar: true))
-
-        bindUserState()
         bindDeeplink()
-    }
-
-    private func bindUserState() {
-        userManager.$userState
-            .receive(on: DispatchQueue.main)
-            .sink { [weak self] userState in
-                self?.refreshRoot(userState: userState)
-            }.store(in: &disposeBag)
-    }
-
-    private func refreshRoot(userState: UserState) {
-        switch userState {
-        case .loggedOut:
-            setLogin()
-        case .loggedIn:
-            setHome()
-        }
+        
+        setLogin() // fixed for testing
     }
 
     private func bindDeeplink() {
@@ -70,7 +50,28 @@ class AppCoordinator: Coordinator {
     }
 
     private func setLogin() {
-        let loginCoordinator = LoginCoordinator(router: router, navigationType: .newFlow(hideBar: false), userManager: userManager)
+        let loginCoordinator = LoginCoordinator(router: router, navigationType: .newFlow(hideBar: false))
+        loginCoordinator.coordinatorStepper
+            .filter { if case .homeRequired = $0 { return true } else { return false } }
+            .subscribe(coordinatorStepper)
+            .store(in: &disposeBag)
+        
         setRootChild(coordinator: loginCoordinator, hideBar: false)
+    }
+    
+    override func bindStepper() {
+        super.bindStepper()
+        
+        coordinatorStepper.receive(on: DispatchQueue.main)
+            .sink { [weak self] step in
+                switch step {
+                case .homeRequired:
+                    self?.setHome()
+                case .loginRequired:
+                    self?.setLogin()
+                default:
+                    break
+                }
+            }.store(in: &disposeBag)
     }
 }

@@ -23,6 +23,9 @@ class Coordinator: NSObject {
     let deeplinkSubject = CurrentValueSubject<String?, Never>(nil)
     var deeplinkDisposeBag = Set<AnyCancellable>()
 
+    let coordinatorStepper = PassthroughSubject<Step, Never>()
+
+    
     var root: Presentable {
         fatalError("Override")
     }
@@ -36,6 +39,39 @@ class Coordinator: NSObject {
         if case .newFlow(let hideBar) = navigationType {
             router.setRoot(root, hideBar: hideBar)
         }
+        
+        bindStepper()
+    }
+    
+    func bindStepper() {
+        coordinatorStepper.receive(on: DispatchQueue.main)
+            .sink { [weak self] step in
+                switch step {
+                case .popRequired:
+                    self?.router.pop()
+                case .dismissRequired:
+                    self?.router.dismiss()
+                case .browserRequired(let urlString):
+                    guard let url = URL(string: urlString) else { return }
+                    if ["http", "https"].contains(url.scheme?.lowercased() ?? "") {
+                        UIApplication.shared.open(url, options: [:]) { _ in }
+                    }
+                case .popToRootRequired:
+                    self?.router.popToRoot(animated: true)
+                case .dismissChildRequired(coordinator: let coordinator):
+                    self?.router.dismiss(coordinator: coordinator)
+                case .copyClipboardRequired(text: let text):
+                    UIPasteboard.general.string = text
+                case .phoneRequired(phone: let phone):
+                    let urlString = "telprompt:\(phone)"
+                    if let url = URL(string: urlString) {
+                        UIApplication.shared.open(url, options: [:]) { _ in }
+                    }
+                default:
+                    break
+                }
+                
+            }.store(in: &disposeBag)
     }
 
     func resetDeeplink() {
